@@ -28,7 +28,11 @@ net.createServer(function (connection) {
 		broadcast(connection.nickname + ' > ' + message, connection);
 	});
 	connection.on('end', function () {
+<<<<<<< HEAD
 		broadcast(connection.nickname + ' saiu!', connection);
+=======
+		broadcast(connection.nickname + 'saiu!', connection);
+>>>>>>> 26d38678ebe4521d6b47300269f55a19c33de69a
 		/*Removendo as conexões do array com splice()*/
 		connections.splice(connections.indexOf(connection), 1);
 	});
